@@ -1,0 +1,966 @@
+/* --- EXISTING CODE --- */
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-header {
+    position: fixed;
+    /* Always stay on screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+
+    background: #fff;
+    padding: 14px 24px;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.brand-logo {
+    width: 216px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 110%;
+    object-fit: contain;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555;
+    margin: 0 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00AEEF;
+}
+
+/* --- BOATS MEGA MENU STYLES --- */
+.nav-item-wrapper {
+    position: static;
+    display: inline-block;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    /* Centering 70% width */
+    width: 70%;
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+.mega-menu.active {
+    display: block !important;
+}
+
+.main-l {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #222 !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.sub-l {
+    font-size: 13px !important;
+    color: #666 !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.brand-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 25px;
+}
+
+.brand-logo-img {
+    width: 60% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+
+.btn-quiz {
+    background: transparent;
+    border: 1px solid #222;
+    padding: 10px 15px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/* --- SIDEBAR & REST REMAIN SAME --- */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background: #f5f5f5;
+    z-index: 9999;
+    transition: 0.4s ease;
+    overflow-y: auto;
+    padding: 25px 32px 40px;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+/* Header */
+.side-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-top: 50px;
+}
+
+/* Close Button */
+.close-btn {
+    /* background: transparent; */
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+}
+
+/* SVG */
+.close-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: #111;
+    stroke-width: 2.5;
+}
+
+/* Menu Groups */
+.menu-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Links */
+.menu-group a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    transition: 0.3s ease;
+    letter-spacing: 0;
+}
+
+.menu-group a:hover {
+    color: #00AEEF;
+    padding-left: 4px;
+}
+
+/* Divider */
+.side-menu hr {
+    border: none;
+    border-top: 1px solid #d9d9d9;
+    margin: 34px 0;
+    width: 100%;
+}
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+
+    .side-menu {
+        width: 100%;
+        left: -100%;
+        padding: 24px 30px 40px;
+    }
+
+    .side-menu.active {
+        left: 0;
+    }
+
+    .menu-group a {
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .side-menu hr {
+        margin: 30px 0;
+    }
+}
+
+
+/* Hero Section Container */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Background Image & Overlay */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Increased opacity slightly to match the "dark/moody" look of your screenshot */
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Content Styling */
+.hero-content {
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-logo img {
+    max-width: 140px;
+    /* Matched to screenshot proportions */
+    height: auto;
+    margin-bottom: 20px;
+    /* Clean white logo look */
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    /* Essential for that "Roman/Classic" look */
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 20px;
+    /* Subtle text shadow for readability */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .hero-logo img {
+        max-width: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+}
+
+/* nav2 */
+/* Sub-navigation custom styles */
+.custom-sub-nav .nav-link {
+    color: #9da1a5;
+    /* text-gray-400 equivalent */
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    /* tracking-widest */
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+/* Active state (White text) */
+.custom-sub-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Hover state (Brand Blue) */
+.custom-sub-nav .nav-link:hover {
+    color: #00AEEF !important;
+}
+
+/* Responsive spacing for Tablet/Desktop */
+@media (min-width: 768px) {
+    .custom-sub-nav .nav-link {
+        font-size: 14px;
+        margin: 0 10px;
+        /* Gap-10 equivalent */
+    }
+}
+
+/* Ensure background is pure black as per your request */
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+/* Founder Section */
+/* Background & Section Spacing */
+.founders-section {
+    background-color: #1f1f1f;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Subtitle: The Founders */
+.founders-subtitle {
+    color: #00AEEF;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Title: Tom & Nancy Smith */
+.founders-title {
+    font-family: 'Cinzel', serif;
+    /* Matching your Hero title font */
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Quote Text */
+.founders-quote {
+    font-family: 'Georgia', serif;
+    /* Serif font for a classic look */
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #d1d5db;
+    /* text-gray-300 equivalent */
+    font-weight: 300;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .founders-title {
+        font-size: 2rem;
+    }
+
+    .founders-quote {
+        font-size: 1.25rem;
+    }
+
+    .founders-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+
+/* ORIGINS --------------------------------------------*/
+/* Custom Background Color */
+.bg-dark-custom {
+    background-color: #1a1a1a !important;
+    padding-bottom: 80px;
+}
+
+/* Background Image Container */
+.origins-bg-container {
+    height: 600px;
+    overflow: hidden;
+}
+
+.origins-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.origins-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Large "ORIGINS" Text Styling */
+.origins-text-wrapper {
+    position: absolute;
+    top: 15%;
+    z-index: 10;
+}
+
+.origins-large-title {
+    font-family: 'Cinzel', serif;
+    font-size: 8rem;
+    /* Desktop size */
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Overlapping Image Logic */
+.origins-foreground-wrapper {
+    margin-top: -250px;
+    /* Pulls image up over the background */
+    position: relative;
+    z-index: 20;
+}
+
+.origins-frame-img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border: 8px solid #1a1a1a;
+    /* Matches section background */
+}
+
+/* Responsive Scaling */
+@media (max-width: 991px) {
+    .origins-large-title {
+        font-size: 5rem;
+    }
+
+    .origins-bg-container {
+        height: 450px;
+    }
+
+    .origins-foreground-wrapper {
+        margin-top: -150px;
+    }
+
+    .origins-frame-img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .origins-large-title {
+        font-size: 3rem;
+        letter-spacing: 0.15em;
+    }
+
+    .origins-bg-container {
+        height: 350px;
+    }
+
+    .origins-foreground-wrapper {
+        margin-top: -100px;
+    }
+}
+
+/* History & Culture Section */
+
+
+
+/* Header Styling */
+.history-main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.blue-vertical-line {
+    width: 1px;
+    height: 90px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+/* Era Title (e.g., 1990's: Foundations) */
+.history-era-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.text-brand-blue {
+    color: #00AEEF;
+}
+
+/* Detail Box Styling */
+.history-date-label {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00AEEF;
+    margin-bottom: 15px;
+}
+
+.text-muted-custom {
+    color: #9da1a5;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* Image Effect (Grayscale to Color) */
+.history-img-effect {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease, transform 0.7s ease;
+}
+
+.history-img-effect:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .history-main-title {
+        font-size: 1.8rem;
+    }
+
+    .history-era-title {
+        font-size: 2.5rem;
+    }
+
+    .blue-vertical-line {
+        height: 60px;
+    }
+}
+
+/* history and culture section2 */
+
+
+
+
+
+.timeline-section {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+    /* Dark background from image */
+    color: #ffffff;
+    font-family: Arial, sans-serif
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.year-title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.timeline-text {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* Offsetting the second item to create the staggered look */
+.offset-row {
+    margin-top: -80px;
+    /* Pulls the second row up slightly to overlap visually */
+}
+
+@media (max-width: 767px) {
+    .offset-row {
+        margin-top: 0;
+    }
+
+    .timeline-item {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .timeline-text {
+        max-width: 100%;
+        margin: 0 auto 30px auto;
+    }
+}
+
+/* History & Culture Section3 ------------------------- */
+
+
+.timeline-container {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 100px 0;
+    overflow: hidden;
+    /* Prevents unwanted scrollbars from negative margins */
+}
+
+.serif-text {
+    font-family: 'Playfair Display', serif;
+    /* Or your preferred serif */
+    font-weight: 300;
+}
+
+.text-gray {
+    color: #a0a0a0;
+}
+
+/* The Secret Sauce: Negative margins for overlapping */
+@media (min-width: 768px) {
+    .overlap-up {
+        margin-top: -120px;
+        /* Pulls the second row up into the first */
+        position: relative;
+        z-index: 1;
+    }
+
+    .top-image {
+        position: relative;
+        z-index: 10;
+        /* Ensures first image stays on top */
+    }
+
+    .bottom-image {
+        border: 12px solid #1a1a1a;
+        /* Creates the "gap" look between overlapping images */
+    }
+
+    .stagger-text {
+        padding-top: 180px;
+        /* Aligns text lower relative to the overlap */
+    }
+}
+
+/* Growth&Recognition---------------------------- */
+.history-section {
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.history-content1 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Typography */
+.section-header h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.section-header h3 {
+    font-family: 'Serif', Georgia, serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    font-size: 2.2rem;
+}
+
+/* Vertical Divider */
+.divider-line {
+    width: 2px;
+    height: 60px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    opacity: 0.5;
+}
+
+/* Content Styles */
+.timeline-year {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.timeline-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cccccc;
+    font-weight: 300;
+}
+
+.icon-box img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-header h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* last part */
+.era-section {
+    background-color: #222222;
+    /* Matches the dark grey background */
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    /* padding: 0; */
+    padding: 100px 0;
+}
+
+/* Title Typography */
+.era-title-year {
+    font-family: 'Times New Roman', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.era-title-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+/* Timeline Items */
+.timeline-year {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: #dddddd;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .era-title-year {
+        font-size: 3rem;
+    }
+
+    .era-title-text {
+        font-size: 2rem;
+    }
+
+    .text-content {
+        padding-top: 40px;
+    }
+}
+
+/* footer */
+footer {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 90px 0 0 0;
+    /* Removed bottom padding here to let footer-bottom handle it */
+    background-color: #fff;
+}
+
+/* This replaces your absolute positioning */
+/* It centers the content on large screens but allows full width on small ones */
+.footer-content-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.footer-logo {
+    max-width: 100%;
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.footer-heading {
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* Vertical dividers for Desktop */
+@media (min-width: 992px) {
+    .border-right-md {
+        border-right: 1px solid #ddd;
+    }
+}
+
+/* Newsletter Input */
+.newsletter-group {
+    display: flex;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.newsletter-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+.subscribe-btn {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+}
+
+/* Socials */
+.social-icons a {
+    color: #333;
+    margin-right: 15px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

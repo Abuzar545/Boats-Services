@@ -1,0 +1,951 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: #fff; */
+    /* color: #222; */
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.custom-header {
+    position: fixed; /* Always stay on screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+
+    background: #fff;
+    padding: 14px 24px;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+     
+}
+
+.brand-logo {
+   
+     width: 216px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2px;
+    background-color: #000;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 110%;
+    object-fit: contain;
+    color: #000;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555;
+    margin: 0 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00AEEF;
+}
+
+/* --- BOATS MEGA MENU STYLES --- */
+.nav-item-wrapper {
+    position: static;
+    display: inline-block;
+}
+
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15%; /* Centering 70% width */
+    width: 70%;
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+.mega-menu.active {
+    display: block !important;
+}
+
+.main-l {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #222 !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.sub-l {
+    font-size: 13px !important;
+    color: #666 !important;
+    letter-spacing: 0px !important;
+    text-transform: none !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.brand-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 25px;
+}
+
+.brand-logo-img {
+    width: 60% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+
+.btn-quiz {
+    background: transparent;
+    border: 1px solid #222;
+    padding: 10px 15px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background: #f8f8f8;
+    z-index: 9999;
+    transition: 0.4s ease;
+    overflow-y: auto;
+    padding: 25px 32px 40px;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.close-btn {
+ border: none;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+}
+
+.close-btn svg {
+     width: 22px;
+    height: 22px;
+    stroke: #111;
+    stroke-width: 2.5;
+}
+
+.menu-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-group a {
+    color: #222;
+    font-size: 17px;
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+.menu-group a:hover {
+    color: #00AEEF;
+    padding-left: 5px;
+}
+
+.side-menu hr {
+    margin: 28px 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+
+/* Container set to 60% of screen height */
+.service-section {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image styling */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Slight transparency as per your original code */
+    z-index: 1;
+     background: rgba(0, 0, 0, 0.4); 
+}
+
+/* Centered content wrapper */
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+/* Title styling with Serif font and thin blue-ish border effect */
+.service-title {
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif; /* Matches the serif style in shot */
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    display: inline-block;
+    font: Cinzel, serif;
+    font-style: Regular;
+    letter-spacing: 0px;
+    
+    /* This creates the thin blue box outline seen in your screenshot editor */
+    /* border: 1px solid rgba(0, 123, 255, 0.5);  */
+}
+
+/* Button styling */
+.btn-request {
+    display: block;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-request:hover {
+    background-color: #333;
+}
+
+/* =========================================================
+   QUICK NAV
+========================================================= */
+
+.Quick-Nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.Quick-Nav::before,
+.Quick-Nav::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.Quick-Nav::before {
+    margin-right: 20px;
+}
+
+.Quick-Nav::after {
+    margin-left: 20px;
+}
+
+/* =========================================================
+   QUICK NAV CARDS
+========================================================= */
+.cards-img-section{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.card {
+    border: none !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+/* =========================================================
+   IMAGE CARDS SECTION
+========================================================= */
+
+.brand-card {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Image */
+.brand-card .bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Dark Overlay to match the screenshot mood */
+.brand-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darkens the image */
+    z-index: 1;
+}
+
+/* Logo positioning */
+.logo-content {
+    position: relative;
+    z-index: 2;
+    width: 40%; /* Adjust based on logo size */
+    text-align: center;
+}
+
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1); /* Forces logos to be white if they aren't already */
+}
+
+/* Remove Bootstrap default gutters just in case */
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+/* =========================================================
+   SUPERIOR SERVICE SECTION
+========================================================= */
+
+.lift {
+    padding: 70px;
+}
+
+.lift h1 {
+    font-size: 48px;
+    font-family: Georgia, serif;
+    margin-bottom: 24px;
+}
+
+.lift p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.btn-service {
+    padding: 14px 28px;
+    border: 1px solid #000;
+    background: transparent;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   ADVANTAGE SECTION
+========================================================= */
+.advantage-section {
+    background-color: #eaf4f9; /* Light blue tint from screenshot */
+    padding: 100px 10%;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-title {
+    font-size: 56px;
+    font-family: 'Times New Roman', serif; /* Matching the serif style */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.intro-text {
+    max-width: 1100px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 70px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantage-card {
+    flex: 1;
+    padding: 0 40px;
+}
+
+/* The vertical lines between the columns */
+.advantage-card.bordered {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+.icon-box {
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.icon-box img {
+    height: 100%;
+    width: auto;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.card-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.apply-link {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 14px;
+    text-underline-offset: 4px;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 992px) {
+    .cards-row {
+        flex-direction: column;
+    }
+    .advantage-card {
+        padding: 40px 0;
+    }
+    .advantage-card.bordered {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+}
+
+/* =========================================================
+   CONCIERGE SECTION
+========================================================= */
+
+.concierge-section {
+    background-color: #1a1a1a; /* Rich dark grey/black */
+    color: #ffffff;
+    padding: 100px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title matches the Serif Uppercase style */
+.concierge-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 52px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.concierge-text {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.concierge-text.small {
+    font-size: 13px;
+    color: #999;
+}
+
+/* List styling with custom bullets */
+.concierge-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 25px 0;
+}
+
+.concierge-list li {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.concierge-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+/* The outlined button from the screenshot */
+.btn-outline-custom {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid #444; /* Dark border */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.concierge-img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================================================
+   LIGHT SECTIONS
+========================================================= */
+
+/* Section Container */
+.cert-section {
+    background: #fff;
+    padding: 60px 0; /* Adjusted padding to match the slim look */
+    border-bottom: 1px solid #eee; /* Optional: adds the thin line seen at bottom */
+}
+
+/* Title Styling */
+.cert-title {
+    font-family: 'Arial', sans-serif; /* Or your preferred clean sans-serif */
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 0;
+}
+
+/* Logo Layout */
+.logo-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Logo Image Sizing & Color */
+.logo-img {
+    max-height: 50px; /* Limits height so they align perfectly */
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    /* Optional: Ensures logos stay black/grayscale like the screenshot */
+    filter: grayscale(100%) contrast(120%); 
+    transition: filter 0.3s ease;
+}
+
+.logo-img:hover {
+    filter: none; /* Brings back color on hover */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .logo-wrapper {
+        justify-content: center !important;
+        gap: 30px;
+    }
+    .cert-title {
+        margin-bottom: 20px;
+    }
+}
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+    background: #eaf5fa;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 18px !important;
+    margin-bottom: 20px;
+    box-shadow: none !important;
+}
+
+textarea.form-control {
+    height: 160px;
+}
+
+.btn-send {
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    padding: 15px 50px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 25px 0;
+    align-items: center;
+}
+
+.q-letter,
+.a-letter {
+    color: #00AEEF;
+    font-weight: 700;
+}
+.Service-Title{
+    width: 720;
+height: 64;
+top: 8792px;
+left: 600px;
+/* angle: 0 deg; */
+opacity: 1;
+font-family: Cinzel;
+font-weight: 400;
+font-style: Regular;
+font-size: 64px;
+/* leading-trim: NONE; */
+line-height: 64px;
+letter-spacing: 0%;
+text-align: center;
+
+}
+/* =========================================================
+   FOOTER
+========================================================= */
+
+/* footer */
+footer {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 90px 0 0 0;
+    /* Removed bottom padding here to let footer-bottom handle it */
+    background-color: #fff;
+}
+
+/* This replaces your absolute positioning */
+/* It centers the content on large screens but allows full width on small ones */
+.footer-content-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.footer-logo {
+    max-width: 100%;
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.footer-heading {
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* Vertical dividers for Desktop */
+@media (min-width: 992px) {
+    .border-right-md {
+        border-right: 1px solid #ddd;
+    }
+}
+
+/* Newsletter Input */
+.newsletter-group {
+    display: flex;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.newsletter-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    background: transparent;
+}
+
+.subscribe-btn {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+}
+
+/* Socials */
+.social-icons a {
+    color: #333;
+    margin-right: 15px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .footer-content-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .service-title {
+        font-size: 42px;
+    }
+
+    .cards-row {
+        flex-direction: column;
+    }
+
+    .lift {
+        padding: 40px 20px;
+    }
+
+    .lift h1 {
+        font-size: 36px;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .w-50 {
+        width: 100% !important;
+    }
+
+    .mega-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .imgContiner {
+        height: 70vh;
+    }
+
+    .service-title {
+        font-size: 34px;
+        width: 90%;
+    }
+
+    .imgContiner .btn {
+        padding: 12px 20px;
+        font-size: 11px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .advantage-section,
+    .form-section,
+    .techs-section,
+    .parts-section,
+    .faq-section,
+    .main-footer {
+        padding: 70px 20px;
+    }
+
+    .side-menu {
+        width: 100%;
+        left: -100%;
+    }
+
+    .side-menu.active {
+        left: 0;
+    }
+
+    .logo-img {
+        max-width: 100px;
+    }
+}

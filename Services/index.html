@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <Nav>
+    <div id="sideMenu" class="side-menu">
+      <div class="side-menu-header">
+        <button class="close-btn" id="closeMenu">
+          <svg viewBox="0 0 24 24" fill="none">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="side-menu-content">
+        <div class="menu-group">
+          <a href="#">Boat Sales</a>
+          <a href="#">Service Center</a>
+          <a href="#">Pro Shop</a>
+          <a href="#">History & People</a>
+        </div>
+        <hr>
+        <div class="menu-group">
+          <a href="#">Start Your Boating Journey</a>
+          <a href="#">CBC Experience</a>
+          <a href="#">Customer Stories</a>
+          <a href="#">Owners Portal</a>
+        </div>
+        <hr>
+        <div class="menu-group">
+          <a href="#">News & Articles</a>
+          <a href="#">Events</a>
+        </div>
+        <hr>
+        <div class="menu-group">
+          <a href="#">Sell/ Trade your boat</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay"></div>
+    <header class="custom-header">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+
+          <div class="d-flex align-items-center">
+            <button class="menu-btn border-0 bg-transparent mr-3" id="openMenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+            <div class="brand-logo1">
+              <a href="../HOME/Home.html"> <img src="../About/assets/Header-Logo.png" alt="CB Logo"> </a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <nav class="desktop-nav nav-links d-none d-lg-flex align-items-center">
+              <div class="nav-item-wrapper">
+                <a href="#" class="boats-trigger">BOATS</a>
+
+                <div class="mega-menu" id="boatsMegaMenu">
+                  <div class="container-fluid px-lg-5">
+                    <div class="row align-items-start text-left">
+                      <div class="col-md-3">
+                        <div class="mega-group d-flex flex-column">
+                          <a href="#" class="mb-3">New Boats</a>
+                          <a href="#" class="mb-3">Pre-Owned Boats</a>
+                          <a href="#" class="mb-4">Specials</a>
+                        </div>
+                        <div>
+                          <a href="#">sell/Trade Your Boat</a><br>
+                          <a href="#">Get Financing</a>
+
+                        </div>
+                      </div>
+                      <div class="col-md-2 px-1">
+                        <div class="brand-card">
+                          <img src="../About/assets/nav/images1.jfif" class="img-fluid" alt="Yamaha">
+                        </div>
+                      </div>
+                      <div class="col-md-2 px-1">
+                        <div class="brand-card">
+                          <img src="../About/assets/nav/couple2.png" class="img-fluid" alt="Barletta">
+                        </div>
+                      </div>
+                      <div class="col-md-2 px-1">
+                        <div class="brand-card">
+                          <img src="../About/assets/nav/images2.jfif" class="img-fluid" alt="Regal">
+                        </div>
+                      </div>
+                      <div class="col-md-3 pl-lg-5">
+                        <div class="mega-group d-flex flex-column">
+                          <a href="#" class="mb-3">Pontoon Boats</a>
+                          <a href="#" class="mb-3">Wake/Surf Boats</a>
+                          <a href="#" class="mb-3">Runabouts</a>
+                          <a href="#" class="btn btn-outline-dark mt-3">BOAT FINDER QUIZ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="../Services/index.html">SERVICE</a>
+              <a href="../About/About.html">HISTORY & PEOPLE</a>
+            </nav>
+
+            <div class="contact-actions d-flex align-items-center ml-4">
+              <a href="tel:9706636473" class="phone-link text-dark font-weight-bold mr-4 d-none d-md-inline">
+                <svg width="16" height="16" fill="currentColor" class="mr-1" viewBox="0 0 20 20">
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.405 5.405l.774-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                  </path>
+                </svg> 970.663.6473
+              </a>
+              <button class="search-btn bg-transparent border-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </Nav>
+  <!--hero section-->
+  <div class="main">
+    <div class="service-section">
+      <img src="./imges/Rectangle 90.png" alt="Service Background" class="bg-image">
+      <div class="content-overlay">
+        <h1 class="service-title">SERVICE CENTER</h1>
+        <button class="btn-request">REQUEST SERVICE</button>
+      </div>
+    </div>
+
+    <!-- brake line -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12">
+          <p class="Quick-Nav">Quick Nav</p>
+        </div>
+      </div>
+    </div>
+    <!-- Cards Section --------------- -->
+    <CardSection class="cards-img-section">
+      <div class="container-fluid mt-3 cards-img-section">
+        <div class="row g-3 justify-content-center">
+
+          <!-- Card 1: CBC Concierge -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 5.png" alt="CBC Concierge" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">CBC
+                  Concierge</h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Boat Maintenance Schedule (with Icon) -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 89.png" alt="Maintenance" class="card-img-top rounded-0">
+              <div class="card-body d-flex justify-content-between align-items-end" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">
+                  Boat Maintenance<br>Schedule
+                </h6>
+                <!-- Download Icon as seen in image_87b339.jpg -->
+                <i class="bi bi-download"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Off-Season Storage -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 90.png" alt="Storage" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">
+                  Off-Season Storage</h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Shrinkwrap -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 69.png" alt="Shrinkwrap" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">
+                  Shrinkwrap</h6>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row g-3 justify-content-center mt-3">
+
+          <!-- Card 1: CBC Concierge -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 93.png" alt="CBC Concierge" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">CBC
+                  Concierge</h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Boat Maintenance Schedule (with Icon) -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 28.png" alt="Maintenance" class="card-img-top rounded-0">
+              <div class="card-body d-flex justify-content-between align-items-end" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">
+                  Boat Maintenance<br>Schedule
+                </h6>
+                <!-- Download Icon as seen in image_87b339.jpg -->
+                <i class="bi bi-download"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Off-Season Storage -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 91.png" alt="Storage" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 1rem; letter-spacing: 1px;">
+                  Off-Season Storage</h6>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Shrinkwrap -->
+          <div class="col-md-3">
+            <div class="card border-0 rounded-0 h-100">
+              <img src="./imges/Rectangle 28.png" alt="Shrinkwrap" class="card-img-top rounded-0">
+              <div class="card-body" style="background-color: #e3f2fd;">
+                <h6 class="card-title fw-bold text-uppercase mb-0" style="font-size: 0.9rem; letter-spacing: 1px;">
+                  Shrinkwrap</h6>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Cards Section Row 2 -->
+
+    </CardSection>
+    <!-- container ends yahan -->
+
+    <!-- 3 Cards - container se BAHAR hai isliye full width -->
+    <imglogo>
+      <section class="brand-section mt-5">
+        <div class="row no-gutters mx-0">
+          <div class="col-md-4 px-0">
+            <div class="brand-card">
+              <img src="./imges/Rectangle 90.png" alt="Mercury Background" class="bg-image">
+              <div class="overlay"></div>
+              <div class="logo-content">
+                <img src="../HOME/assets/Brand/mercury-footer-logo 1.png" alt="Mercury" class="brand-logo">
+                <!-- <img src="../HOME/assets/Brand/Mercury_Mercruiser_wt 1.png" alt="Mercury" class="brand-logo"> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 px-0">
+            <div class="brand-card middle-card">
+              <img src="./imges/Rectangle 91.png" alt="Volvo Background" class="bg-image">
+              <div class="overlay"></div>
+              <div class="logo-content">
+                <img src="../HOME/assets/Brand/VolvoPentaLarge-wt 1.png" alt="Volvo Penta" class="brand-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 px-0">
+            <div class="brand-card">
+              <img src="./imges/Rectangle 69.png" alt="Yamaha Background" class="bg-image">
+              <div class="overlay"></div>
+              <div class="logo-content">
+                <img src="../HOME/assets/Brand/yamaha-wt 1.png" alt="Yamaha" class="brand-logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </imglogo>
+    <!-- END OF 3 CARDS -->
+
+    <!-- Super card -->
+    <SuperCard>
+      <div class="d-flex SuperCard" style="padding: 4% 8%;">
+        <div class="lift w-50">
+          <h1>SUPERIOR REPAIRS &<br>MAINTENANCE</h1>
+          <p>At Colorado Boat Center, service is what keeps you on the water.</p>
+          <p>From routine maintenance to repairs and upgrades, our team works on a wide range of boats...</p>
+          <p>Our certified technicians are trained to service...</p>
+          <button class="btn-service">REQUEST SERVICE</button>
+        </div>
+        <div class="right w-50">
+          <img src="imges/img.png" alt="Boat Service" class="service-img">
+        </div>
+      </div>
+
+    </SuperCard>
+
+    <!-- Advantage Section -->
+    <program>
+      <section class="advantage-section">
+        <div class="container-fluid px-lg-5">
+          <h1 class="main-title">24/7 ADVANTAGE PROGRAM</h1>
+          <p class="intro-text">
+            The 24/7 Advantage Program at Colorado Boat Center is a convenience program designed for
+            <strong>CBC boat buyers</strong> that allows members to drop off and pick up their boats
+            for service outside normal business hours. With flexible access to the service facility,
+            the program makes it easier to fit maintenance and repairs into your schedule, so you can
+            spend less time planning around service hours and more time enjoying the water.
+          </p>
+
+          <div class="cards-row">
+            <div class="advantage-card">
+              <div class="icon-box"><img src="calendar-icon.png" alt="Icon"></div>
+              <h3 class="card-title">DROP OFF & PICK UP<br>ANYTIME</h3>
+              <p class="card-desc">Drop off your boat for service any time of day, any day of the week – even after a
+                long day on the water – and pick it up whenever it's convenient. Simply pay with a credit card and your
+                serviced boat will be ready when you are.</p>
+            </div>
+
+            <div class="advantage-card bordered">
+              <div class="icon-box"><img src="storage-icon.png" alt="Icon"></div>
+              <h3 class="card-title">SECURE STORAGE</h3>
+              <p class="card-desc">Colorado Boat Center's facility is equipped with added security,
+                giving you peace of mind knowing your boat is safe while it's awaiting service or pickup.</p>
+            </div>
+
+            <div class="advantage-card">
+              <div class="icon-box"><img src="join-icon.png" alt="Icon"></div>
+              <h3 class="card-title">EASY TO JOIN</h3>
+              <p class="card-desc">Joining the 24/7 Advantage Program is simple. Complete and submit the registration
+                form. Once processed (which may take up to five days), you'll be ready to take advantage of this
+                flexible, customer-focused service.</p>
+              <a href="#" class="apply-link">APPLY TODAY</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </program>
+
+    <!-- Two cards -->
+    <twoCards>
+      <div class="container-fluid bg-white" style="padding: 4% 8%;">
+        <div class="row">
+
+          <!-- Left: Off-Season Storage -->
+          <div class="col-md-6 px-4">
+            <img src="imges/Rectangle 91.png" alt="Off-Season Storage" class="img-fluid w-100"
+              style="object-fit: cover; height: 400px;">
+
+            <h5 class="mt-3 mb-2 font-weight-bold" style="letter-spacing: 1px; font-size: 20px;">
+              OFF-SEASON STORAGE
+            </h5>
+
+            <p class="text-muted" style="font-size: 13.5px; line-height: 1.8;">
+              We offer storage starting at $959 for a seven-month term, making the
+              off-season stress-free. Schedule it with your winter service and we'll
+              take care of the rest, including secure off-site storage and all the
+              coordination behind the scenes. When spring rolls around, we'll schedule
+              your summarization and have your boat ready for pickup.
+            </p>
+          </div>
+
+          <!-- Right: Shrinkwrap -->
+          <div class="col-md-6 px-4">
+            <img src="imges/twocardimg2.jpg" alt="Shrinkwrap" class="img-fluid w-100"
+              style="object-fit: cover; height: 400px;">
+
+            <h5 class="mt-3 mb-2 font-weight-bold" style="letter-spacing: 1px; font-size: 20px;">
+              SHRINKWRAP
+            </h5>
+
+            <p class="text-muted" style="font-size: 13.5px; line-height: 1.8;">
+              Protect your boat from Colorado's harsh off-season elements with
+              professional shrink wrap, starting at $444. This tight, weather resistant
+              seal helps guard against snow, moisture, dirt, and UV exposure throughout
+              the winter months. It's a simple step that goes a long way in preserving
+              your boat's condition and getting you ready for a smooth start come spring.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </twoCards>
+
+    <!-- request section -->
+    <requestSection>
+      <div class="container-fluid px-0 bg-white mb-3">
+        <div class="row no-gutters align-items-stretch">
+
+          <!-- Left: Image -->
+          <div class="col-md-6 pr-4">
+            <img src="imges/Requestimg.jpg" alt="Boat on water" class="img-fluid w-100 h-100"
+              style="object-fit: cover; min-height: 500px;">
+          </div>
+
+          <!-- Right: Content -->
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="px-5 py-5">
+
+              <h2 class="mb-4" style="font-family: Georgia, serif; font-size: 36px; font-weight: 400;">
+                Most Requested<br>Services
+              </h2>
+
+              <ul class="list-unstyled mb-4">
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Impeller replacement <span class="text-muted font-italic">– starting at $423</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Oil change <span class="text-muted font-italic">– starting at $215</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Outdrive service <span class="text-muted font-italic">– starting at $465</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Prop repair <span class="text-muted font-italic">– starting at $195</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Simple Winterization <span class="text-muted font-italic">– starting at $412</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Summarization <span class="text-muted font-italic">– starting at $200</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Full Winterization / Annual Service <span class="text-muted font-italic">– starting at $766</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Off-season storage (7 month) <span class="text-muted font-italic">– starting at $959</span>
+                </li>
+                <li class="py-2 mb-1" style="border-left: 2px solid #00aacc; padding-left: 12px; font-size: 14px;">
+                  Shrink wrap <span class="text-muted font-italic">– starting at $444</span>
+                </li>
+              </ul>
+
+              <button class="btn btn-outline-dark btn-sm px-4 py-2"
+                style="letter-spacing: 1.5px; font-size: 11px; font-weight: 600; border-radius: 0;">
+                REQUEST SERVICE
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </requestSection>
+
+
+
+    <section class="concierge-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <h1 class="concierge-title">CBC CONCIERGE</h1>
+
+            <p class="concierge-text">Boating should feel easy and that's exactly what this is built for.</p>
+            <p class="concierge-text">Your level of support, your way:</p>
+
+            <ul class="concierge-list">
+              <li>Complimentary guidance to help you get started</li>
+              <li>24/7 access when you need it</li>
+              <li>Optional VIP and on-water concierge services</li>
+              <li>Storage, transport, and service coordination</li>
+            </ul>
+
+            <p class="concierge-text small">
+              We offer multiple levels of concierge support, from included services to premium options,
+              based on how involved you want to be and where you're located.
+            </p>
+
+            <p class="concierge-text small">
+              Concierge starts the moment you become part of our boating family.
+            </p>
+
+            <a href="#" class="btn-outline-custom">REQUEST SERVICE</a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="image-wrapper">
+              <img src="imges/concerial.jpg" alt="Pontoon Boat" class="img-fluid concierge-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="cert-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-center text-md-left mb-4 mb-md-0">
+            <h2 class="cert-title">CERTIFICATIONS</h2>
+          </div>
+
+          <div class="col-md-9">
+            <div class="logo-wrapper d-flex justify-content-between align-items-center ">
+              <img src="./logos/1.png" alt="Volvo Penta" class="logo-img">
+              <img src="logos/e2b0c063f03e71a419fa3b5c5e406107a1c6d047 (1).png" alt="Mercury" class="logo-img">
+              <img src="logos/ad3477b0bca32ed3008bdba887c1af69e99b4e40 (1).png" alt="MerCruiser" class="logo-img">
+              <img src="logos/2.png" alt="Yamaha" class="logo-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- certifications tech -->
+    <section class="techs-section">
+      <div class="container py-lg-5">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <img src="imges/tech img.jpg" alt="Certified Technician" class="hero-image shadow-sm">
+          </div>
+
+          <div class="col-lg-6 pl-lg-5">
+            <h2 class="main-title">Certified Techs</h2>
+
+            <p class="description">
+              Our technicians stay at the forefront of marine technology, constantly evolving their skills to match
+              the latest industry innovations. From routine maintenance to complex repairs, you can hit the water with
+              confidence knowing your boat was serviced correctly the first time by a team that truly takes pride in
+              their craft.
+            </p>
+
+            <p class="description font-weight-bold">Here's what that means for you:</p>
+
+            <ul class="feature-list">
+              <li>Factory-trained and certified marine technicians</li>
+              <li>Ongoing training to keep up with today's boats and technology</li>
+              <li>Experience across a wide range of brands and systems</li>
+              <li>A team that pays attention to the details</li>
+            </ul>
+
+            <p class="description mb-4">
+              The people working on your boat matter, and we don't take that lightly.
+            </p>
+
+            <a href="#" class="btn btn-request-dark btn-send">Request Service</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="parts-section mb-3">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2 class="main-title">Parts</h2>
+
+            <p class="description font-weight-bold">Here's how we help:</p>
+
+            <ul class="feature-list">
+              <li>Common parts and accessories in stock</li>
+              <li>Access to trusted manufacturers and suppliers</li>
+              <li>Help finding harder-to-locate or model-specific parts</li>
+              <li>A team that makes sure you get the right part the first time</li>
+            </ul>
+
+            <p class="description mb-4">
+              Whether you handle your own maintenance or just need help finding the right part, we make the process
+              simple.
+            </p>
+
+            <a href="#" class="btn btn-request-dark btn-parts btn-send">Request Parts</a>
+          </div>
+
+          <div class="col-lg-6">
+            <img src="imges/part img.jpg" height="500px" width="700px" alt="Boat Hardware" class="hero-image shadow-sm">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- service pricing -->
+    
+
+    <section class="form-section">
+      <div class="container">
+        <h2 class="main-title">Request Service</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Last Name">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control" placeholder="Phone">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Boat Year Make Model">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Hull ID#">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-12">
+                  <textarea class="form-control" placeholder="Describe Service Needs"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-send">Send Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="Service-Title">Service FAQs</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="faq-item">
+              <p class="faq-question">
+                <span class="q-letter">Q.</span> How do I schedule a service appointment?
+              </p>
+              <p class="faq-answer">
+                <span class="a-letter">A.</span> You can easily book online or call our service team to schedule
+                maintenance, repairs, or upgrades for your boat, engine, or trailer.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-question">
+                <span class="q-letter">Q.</span> What brands does CBC service?
+              </p>
+              <p class="faq-answer">
+                <span class="a-letter">A.</span> We service Barletta, Regal, Yamaha, Indmar, Mercury MerCruiser, and
+                Volvo Penta boats and motors with factory-trained technicians.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-question">
+                <span class="q-letter">Q.</span> Do you offer warranty service?
+              </p>
+              <p class="faq-answer">
+                <span class="a-letter">A.</span> Yes! Colorado Boat Center is an authorized dealer for multiple brands
+                and can handle warranty claims and repairs according to factory guidelines.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <p class="faq-question">
+                <span class="q-letter">Q.</span> What are your service hours?
+              </p>
+              <p class="faq-answer">
+                <span class="a-letter">A.</span> Service is available during standard business hours, with 24/7
+                drop-off and pick-up options for CBC Concierge or 24/7 Advantage program members.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- footer -->
+          <footer>
+    <div class="container-fluid footer-content-wrapper">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 border-right-md">
+                <img src="assets/Header-Logo.png" alt="Logo" class="footer-logo">
+                <p class="footer-tagline pr-lg-4">
+                    Your wife called and said it was OK to buy a boat... your kids are texting too.
+                </p>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                <h6 class="footer-heading">Boats</h6>
+                <ul class="footer-links">
+                    <li><a href="#">New Boats For Sale</a></li>
+                    <li><a href="#">Pre-Owned Boats for Sale</a></li>
+                    <li><a href="#">Pontoon boats</a></li>
+                    <li><a href="#">Sport Fish Boats</a></li>
+                    <li><a href="#">Runabouts</a></li>
+                    <li><a href="#">Sell My Boat</a></li>
+                    <li><a href="#">Get Financing</a></li>
+                    <li><a href="#">Service Center</a></li>
+                    <li><a href="#">Storage</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                <h6 class="footer-heading">Company</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Pro Shop</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">News & Articles</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="social-icons mt-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 pl-lg-5 mt-4 mt-lg-0">
+                <h2 class="h4 font-weight-normal mb-1">JOIN THE</h2>
+                <h2 class="h4 font-weight-bold mb-4">CONVERSATION</h2>
+                <div class="newsletter-group">
+                    <input type="email" class="newsletter-input" placeholder="Enter Email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+        <div class="container-fluid">
+            <p class="mb-0">
+                Copyrights &copy; 2024 Colorado Boat Center. All Rights Reserved. 
+                <span class="mx-1 d-none d-md-inline">|</span> 
+                <br class="d-md-none"> <a href="#" class="text-secondary">Privacy Policy</a> | 
+                <a href="#" class="text-secondary">Accessibility</a> | 
+                <span>Powered by MDS Brand</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+   
+
+    <!-- main ends -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"></script>
+</body>
+<script src="script.js"></script>
+
+</html>

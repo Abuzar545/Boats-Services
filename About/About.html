@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="About.css">
+</head>
+
+<body>
+    <!-- navigation -->
+    <Nav>
+        <div id="sideMenu" class="side-menu">
+            <div class="side-menu-header">
+                <button class="close-btn" id="closeMenu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="side-menu-content">
+                <div class="menu-group">
+                    <a href="#">Boat Sales</a>
+                    <a href="#">Service Center</a>
+                    <a href="#">Pro Shop</a>
+                    <a href="#">History & People</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">Start Your Boating Journey</a>
+                    <a href="#">CBC Experience</a>
+                    <a href="#">Customer Stories</a>
+                    <a href="#">Owners Portal</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">News & Articles</a>
+                    <a href="#">Events</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">Sell/ Trade your boat</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="menuOverlay" class="menu-overlay"></div>
+        <header class="custom-header">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between">
+
+                    <div class="d-flex align-items-center">
+                        <button class="menu-btn border-0 bg-transparent mr-3" id="openMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="4" x2="20" y1="12" y2="12"></line>
+                                <line x1="4" x2="20" y1="6" y2="6"></line>
+                                <line x1="4" x2="20" y1="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <div class="brand-logo">
+                           <a href="../HOME/Home.html"> <img src="./assets/Header-Logo.png" alt="CB Logo"></a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <nav class="desktop-nav nav-links d-none d-lg-flex align-items-center">
+                            <div class="nav-item-wrapper">
+                                <a href="#" class="boats-trigger">BOATS</a>
+
+                                <div class="mega-menu" id="boatsMegaMenu">
+                                    <div class="container-fluid px-lg-5">
+                                        <div class="row align-items-start text-left">
+                                            <div class="col-md-3">
+                                                <div class="mega-group d-flex flex-column">
+                                                    <a href="#" class="mb-3">New Boats</a>
+                                                    <a href="#" class="mb-3">Pre-Owned Boats</a>
+                                                    <a href="#" class="mb-4">Specials</a>
+                                                </div>
+                                                <div>
+                                                    <a href="#">sell/Trade Your Boat</a><br>
+                                                    <a href="#">Get Financing</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/nav/images1.jfif" class="img-fluid" alt="Yamaha">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/nav/couple2.png" class="img-fluid" alt="Barletta">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/nav/images2.jfif" class="img-fluid" alt="Regal">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 pl-lg-5">
+                                                <div class="mega-group d-flex flex-column">
+                                                    <a href="#" class="mb-3">Pontoon Boats</a>
+                                                    <a href="#" class="mb-3">Wake/Surf Boats</a>
+                                                    <a href="#" class="mb-3">Runabouts</a>
+                                                    <a href="#" class="btn btn-outline-dark mt-3">BOAT FINDER QUIZ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="../Services/index.html">SERVICE</a>
+                            <a href="#">HISTORY & PEOPLE</a>
+                        </nav>
+
+                        <div class="contact-actions d-flex align-items-center ml-4">
+                            <a href="tel:9706636473"
+                                class="phone-link text-dark font-weight-bold mr-4 d-none d-md-inline">
+                                <svg width="16" height="16" fill="currentColor" class="mr-1" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.405 5.405l.774-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                    </path>
+                                </svg> 970.663.6473
+                            </a>
+                            <button class="search-btn bg-transparent border-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </Nav>
+    <!-- Hero section -->
+    <heroSection>
+        <section class="hero-section">
+            <div class="video-container">
+                <img src="assets/Hero.jpg" alt="Background" class="hero-bg-img">
+                <div class="video-overlay"></div>
+            </div>
+
+            <div class="hero-content text-center">
+                <div class="hero-logo">
+                    <img src="assets/logo.png" alt="CB Logo" class="img-fluid">
+                </div>
+                <h1 class="hero-title">Our History & Culture</h1>
+            </div>
+        </section>
+    </heroSection>
+    <!-- nav2 -->
+    <nav2>
+        <section class="bg-dark py-4">
+            <div class="container">
+                <ul class="nav justify-content-center custom-sub-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FOUNDERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">HISTORY/CULTURE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">AWARDS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TEAM</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </nav2>
+    <!-- FounderSection -->
+    <founderSection>
+        <section class="founders-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8 text-center text-white">
+                        <h4 class="founders-subtitle">The Founders</h4>
+                        <h2 class="founders-title">Tom & Nancy Smith</h2>
+
+                        <blockquote class="founders-quote mt-5">
+                            "Before Colorado Boat Center, we were just a family who loved boating. Everything we’ve
+                            built started right there."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </founderSection>
+    <orgins>
+        <section class="origins-section bg-dark-custom position-relative">
+            <div class="origins-bg-container position-relative">
+                <img src="assets/Hero.jpg" alt="Origins Background" class="img-fluid origins-main-img">
+                <div class="origins-overlay"></div>
+
+                <div class="origins-text-wrapper text-center w-100">
+                    <h2 class="origins-large-title text-white">ORIGINS</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="origins-foreground-wrapper">
+                            <img src="assets/Orgins.png" alt="Family History"
+                                class="img-fluid shadow-lg origins-frame-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </orgins>
+    <HistoryCulture>
+        <section class="history-grid-section bg-dark-custom text-white py-5">
+            <div class="container py-md-5">
+                <header class="d-flex flex-column align-items-center text-center mb-5">
+                    <h2 class="history-main-title">History & Culture</h2>
+                    <div class="blue-vertical-line"></div>
+                </header>
+
+                <div class="row align-items-center">
+                    <div class="col-md-6 pr-md-5 mb-5 mb-md-0">
+                        <h3 class="history-era-title mb-4">
+                            1990's:<br><span class="text-brand-blue">Foundations</span>
+                        </h3>
+                        <div class="history-detail-box">
+                            <h4 class="history-date-label">1990: Established</h4>
+                            <p class="text-muted-custom">
+                                Tom Smith, with 21 years of experience in the grocery industry, started a company making
+                                custom canvas boat covers, addressing a personal need he had as a boater.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="history-image-wrapper">
+                            <img src="assets/historyimg1.png" alt="1990s Boat Center"
+                                class="img-fluid shadow-lg history-img-effect">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <Section2 class="historySection2">
+            <section class="timeline-section">
+                <div class="container">
+
+                    <div class="row timeline-item align-items-center">
+                        <div class="col-md-6">
+                            <img src="assets/1993img (1).png" alt="1993 Boats" class="timeline-img">
+                        </div>
+                        <div class="col-md-6 pl-md-5">
+                            <h2 class="year-title">1993</h2>
+                            <p class="timeline-text">
+                                Invader and TMC pontoons were CBC's first new boat brands.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row timeline-item align-items-center offset-row">
+                        <div class="col-md-5 offset-md-3">
+                            <img src="assets/1996img (2).png" alt="1996 Storefront" class="timeline-img">
+                        </div>
+                        <div class="col-md-4 pl-md-4">
+                            <h2 class="year-title">1996 – PRESENT</h2>
+                            <p class="timeline-text">
+                                The iconic "Your wife called and said it was OK to buy a boat" sign was hung,
+                                followed by "your kids are texting too"
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </Section2>
+
+        <Section3>
+            <section class="timeline-container">
+                <div class="container">
+
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h2 class="serif-text display-4 mb-3">1997 – 2017</h2>
+                            <p class="text-gray pr-md-5">
+                                The red Glastron is hung in front of CBC and becomes a landmark off of the I-25
+                                corridor.
+                            </p>
+                        </div>
+
+                        <div class="col-md-7 top-image">
+                            <img src="assets/img1997.png" alt="Landmark sign" class="img-fluid shadow-lg" />
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters overlap-up">
+                        <div class="col-md-8">
+                            <img src="assets/img1999.png" alt="Aerial view" class="img-fluid shadow-lg bottom-image" />
+                        </div>
+
+                        <div class="col-md-4 pl-md-4 stagger-text">
+                            <h2 class="serif-text display-4 mb-3">1999</h2>
+                            <p class="text-gray">
+                                CBC purchased property of current location.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </Section3>
+    </HistoryCulture>
+    <!-- Growth&Recognition---------------------------- -->
+    <Growth&Recognition>
+        <section class="history-section text-center">
+            <div class="container-fluid history-content1">
+
+                <div class="row mb-4">
+                    <div class="col-12 section-header">
+                        <h2>2000’s:</h2>
+                        <h3>Growth & Recognition</h3>
+                        <div class="divider-line"></div>
+                    </div>
+                </div>
+
+                <div class="row align-items-start text-start mt-5">
+
+                    <div class="col-md-4 px-4 mb-5">
+                        <h4 class="timeline-year">2000 – 2008</h4>
+                        <p class="timeline-text">
+                            Tom Smith was an active member of the Glastron dealer board and contributed to many of the
+                            innovations and success behind the brand before it was sold. To this day, CBC displays an
+                            availability board of current inventory offering No hassle, No haggle pricing for CBC boat
+                            buyers.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 px-4 mb-5">
+                        <div class="icon-box text-center text-md-start">
+                            <img src="assets/WMW logo 3.png" alt="Women Making Waves">
+                        </div>
+                        <h4 class="timeline-year">2005 – PRESENT</h4>
+                        <p class="timeline-text">
+                            CBC offers first Women Making Waves class. Followed by Men In the Know in 2006.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 px-4 mb-5">
+                        <div class="icon-box text-center text-md-start">
+                            <img src="assets/Marine Industry Certified Dealer Logo 2.png"
+                                alt="Marine Industry Certified">
+                        </div>
+                        <h4 class="timeline-year">2005 – PRESENT</h4>
+                        <p class="timeline-text">
+                            CBC achieves Marine Industry Certification.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </Growth&Recognition>
+
+    <!-- expansion & Excellence -->
+    <Expansion&Excellence>
+        <Section class="history-section text-center">
+            <div class="container-fluid history-content1">
+                <div class="row mb-4">
+                    <div class="col-12 section-header">
+                        <h2>2010’s:</h2>
+                        <h3>Expansion & Excellence</h3>
+                        <div class="divider-line"></div>
+                    </div>
+                </div>
+                <Section2 class="historySection2">
+                    <section class="timeline-section">
+                        <div class="container">
+
+                            <div class="row timeline-item align-items-center">
+                                <div class="col-md-6">
+                                    <img src="assets/img2010.png" alt="2010 Boats" class="timeline-img">
+                                </div>
+                                <div class="col-md-6 pl-md-5">
+                                    <h2 class="year-title">2010</h2>
+                                    <p class="timeline-text">
+                                        CBC expanded its product lineup and continued to focus on customer satisfaction.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row timeline-item align-items-center offset-row">
+                                <div class="col-md-5 offset-md-3">
+                                    <img src="assets/img2012.png" alt="2012 Storefront" class="timeline-img">
+                                </div>
+                                <div class="col-md-4 pl-md-4">
+                                    <h2 class="year-title">2012 – PRESENT</h2>
+                                    <p class="timeline-text">
+                                        The iconic "Your wife called and said it was OK to buy a boat" sign was hung,
+                                        followed by "your kids are texting too"
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </Section2>
+            </div>
+        </Section>
+        </Expansion>
+
+        <!-- 2017 Leadership -->
+        <Leader>
+            <Section class="history-section text-center">
+                <div class="container history-content1">
+                    <div class="row mb-2">
+                        <div class="col-12 section-header">
+                            <h2>2017:</h2>
+                            <h3>NEXT GENERATION LEADERSHIP</h3>
+                            <div class="divider-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <section class="timeline-container container">
+                    <div class="top-divider"></div>
+
+                    <div class="row align-items-center">
+                        <div class="col-md-6 pe-md-5">
+                            <img src="assets/img2017.png" alt="Siblings at CBC" class="featured-img">
+                        </div>
+
+                        <div class="col-md-6 ps-md-5">
+
+                            <div class="timeline-item1">
+                                <h2 class="year-title">FEBRUARY</h2>
+                                <p class="timeline-text">
+                                    Continuing the Legacy, Siblings Eric and Ashley <br class="d-none d-lg-block">
+                                    sign on for succession into CBC
+                                </p>
+                            </div>
+
+                            <div class="timeline-item2">
+                                <h2 class="year-title">MAY</h2>
+                                <p class="timeline-text">
+                                    CBC moves into new building housing all <br class="d-none d-lg-block">
+                                    departments under one roof.
+                                </p>
+                            </div>
+
+                            <div class="timeline-item1">
+                                <h2 class="year-title">JULY</h2>
+                                <p class="timeline-text">
+                                    Ashley Smith is awarded the Boating Industry's <br class="d-none d-lg-block">
+                                    40 under 40 Award. Young professionals leading <br class="d-none d-lg-block">
+                                    the pack in the boating industry.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </Section>
+        </Leader>
+        <!-- 2019 -->
+        <Section3>
+            <section class="timeline-container">
+                <div class="container">
+
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <h2 class="serif-text display-2 pl-4">2019</h2>
+
+                        </div>
+
+                        <div class="col-md-6 top-image">
+                            <img src="assets/2019img1.jpg" alt="Landmark sign" class="img-fluid shadow-lg" />
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters overlap-up">
+                        <div class="col-md-6">
+                            <img src="assets/2019img2.jpg" alt="Aerial view" class="img-fluid shadow-lg bottom-image" />
+                        </div>
+
+                        <div class="col-md-6 pl-md-1 stagger-text">
+
+                            <p class="text-gray">
+                                CBC purchased property of current location. The red Glastron is hung in front of CBC and
+                                becomes a landmark off of the I-25
+                                corridor. purchased property of current location. The red Glastron is hung in front of
+                                CBC and becomes a landmark off of the I-25
+                                corridor.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </Section3>
+        <!-- lastsection -->
+        <lastsection>
+            <section class="era-section">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <img src="assets/lastsectionimg.jpg" alt="Dealer Week Award" class="featured-image">
+                        </div>
+
+                        <div class="col-lg-6 ps-lg-5 text-content">
+                            <div class="era-header">
+                                <h2 class="era-title-year">2020s:</h2>
+                                <h3 class="era-title-text">Modern Era</h3>
+                            </div>
+
+                            <div class="timeline-entry">
+                                <h4 class="timeline-year">2023 – PRESENT</h4>
+                                <p class="timeline-desc">
+                                    CBC was one of 22 national dealers to be awarded "Great Dealership to Work For" by
+                                    MRAA.
+                                </p>
+                            </div>
+
+                            <div class="timeline-entry">
+                                <h4 class="timeline-year">2024 – PRESENT</h4>
+                                <p class="timeline-desc">
+                                    Eric Smith serves on the MRAA Board of Directors and Dealership of the Future
+                                    Taskforce.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </lastsection>
+        <!-- Footer----------- -->
+         <footer>
+    <div class="container-fluid footer-content-wrapper">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 border-right-md">
+                <img src="assets/Header-Logo.png" alt="Logo" class="footer-logo">
+                <p class="footer-tagline pr-lg-4">
+                    Your wife called and said it was OK to buy a boat... your kids are texting too.
+                </p>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                <h6 class="footer-heading">Boats</h6>
+                <ul class="footer-links">
+                    <li><a href="#">New Boats For Sale</a></li>
+                    <li><a href="#">Pre-Owned Boats for Sale</a></li>
+                    <li><a href="#">Pontoon boats</a></li>
+                    <li><a href="#">Sport Fish Boats</a></li>
+                    <li><a href="#">Runabouts</a></li>
+                    <li><a href="#">Sell My Boat</a></li>
+                    <li><a href="#">Get Financing</a></li>
+                    <li><a href="#">Service Center</a></li>
+                    <li><a href="#">Storage</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                <h6 class="footer-heading">Company</h6>
+                <ul class="footer-links">
+                    <li><a href="#">Pro Shop</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">News & Articles</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <div class="social-icons mt-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 pl-lg-5 mt-4 mt-lg-0">
+                <h2 class="h4 font-weight-normal mb-1">JOIN THE</h2>
+                <h2 class="h4 font-weight-bold mb-4">CONVERSATION</h2>
+                <div class="newsletter-group">
+                    <input type="email" class="newsletter-input" placeholder="Enter Email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+        <div class="container-fluid">
+            <p class="mb-0">
+                Copyrights &copy; 2024 Colorado Boat Center. All Rights Reserved. 
+                <span class="mx-1 d-none d-md-inline">|</span> 
+                <br class="d-md-none"> <a href="#" class="text-secondary">Privacy Policy</a> | 
+                <a href="#" class="text-secondary">Accessibility</a> | 
+                <span>Powered by MDS Brand</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="About.js"></script>
+
+</html>

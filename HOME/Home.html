@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Home.css">
+</head>
+
+<body>
+    <Nav>
+        <div id="sideMenu" class="side-menu">
+            <div class="side-menu-header">
+                <button class="close-btn" id="closeMenu">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="side-menu-content">
+                <div class="menu-group">
+                    <a href="#">Boat Sales</a>
+                    <a href="#">Service Center</a>
+                    <a href="#">Pro Shop</a>
+                    <a href="#">History & People</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">Start Your Boating Journey</a>
+                    <a href="#">CBC Experience</a>
+                    <a href="#">Customer Stories</a>
+                    <a href="#">Owners Portal</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">News & Articles</a>
+                    <a href="#">Events</a>
+                </div>
+                <hr>
+                <div class="menu-group">
+                    <a href="#">Sell/ Trade your boat</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="menuOverlay" class="menu-overlay"></div>
+        <header class="custom-header">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between">
+
+                    <div class="d-flex align-items-center">
+                        <button class="menu-btn border-0 bg-transparent mr-3" id="openMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="4" x2="20" y1="12" y2="12"></line>
+                                <line x1="4" x2="20" y1="6" y2="6"></line>
+                                <line x1="4" x2="20" y1="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <div class="brand-logo">
+                            <a href="#"> <img src="./assets/Header-Logo.png" alt="CB Logo"> </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <nav class="desktop-nav nav-links d-none d-lg-flex align-items-center">
+                            <div class="nav-item-wrapper">
+                                <a href="#" class="boats-trigger">BOATS</a>
+
+                                <div class="mega-menu" id="boatsMegaMenu">
+                                    <div class="container-fluid px-lg-5">
+                                        <div class="row align-items-start text-left">
+                                            <div class="col-md-3">
+                                                <div class="mega-group d-flex flex-column">
+                                                    <a href="#" class="mb-3">New Boats</a>
+                                                    <a href="#" class="mb-3">Pre-Owned Boats</a>
+                                                    <a href="#" class="mb-4">Specials</a>
+                                                </div>
+                                                <div>
+                                                    <a href="#">sell/Trade Your Boat</a><br>
+                                                    <a href="#">Get Financing</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/nav/images1.jfif" class="img-fluid" alt="Yamaha">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/Arrivals/couple1.png" class="img-fluid"
+                                                        alt="Barletta">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 px-1">
+                                                <div class="brand-card">
+                                                    <img src="assets/nav/images2.jfif" class="img-fluid" alt="Regal">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 pl-lg-5">
+                                                <div class="mega-group d-flex flex-column">
+                                                    <a href="#" class="mb-3">Pontoon Boats</a>
+                                                    <a href="#" class="mb-3">Wake/Surf Boats</a>
+                                                    <a href="#" class="mb-3">Runabouts</a>
+                                                    <a href="#" class="btn btn-outline-dark mt-3">BOAT FINDER QUIZ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="../Services/index.html">SERVICE</a>
+                            <a href="../About/About.html">HISTORY & PEOPLE</a>
+                        </nav>
+
+                        <div class="contact-actions d-flex align-items-center ml-4">
+                            <a href="tel:9706636473"
+                                class="phone-link text-dark font-weight-bold mr-4 d-none d-md-inline">
+                                <svg width="16" height="16" fill="currentColor" class="mr-1" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.405 5.405l.774-1.548a1 1 0 011.06-.539l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                    </path>
+                                </svg> 970.663.6473
+                            </a>
+                            <button class="search-btn bg-transparent border-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </Nav>
+    <!-- Hero Section -->
+    <heroSection>
+        <section class="hero-section">
+            <div class="video-container">
+                <img src="assets/Hero.png" alt="" width="100%" height="100%">
+                <div class="video-overlay"></div>
+            </div>
+
+            <div class="hero-content text-center">
+                <div class="hero-logo mb-4 brand-blue-border">
+                    <img src="assets/Logo.png" alt="CB Logo" class="img-fluid blue-logo" width="178px" height="200px">
+                </div>
+                <h1 class="hero-title">THE BEST BOAT BRINGS<br>YOUR PEOPLE TOGETHER</h1>
+
+                <div class="hero-btns mt-5">
+                    <a href="#" class="btn-hero mr-3">BROWSE INVENTORY</a>
+                    <a href="#" class="btn-hero">START YOUR BOATING JOURNEY</a>
+                </div>
+            </div>
+
+        </section>
+    </heroSection>
+    <!-- About Us -->
+    <Aboutus>
+        <section class="hero-section1 my-2">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+
+                    <div class="col-lg-6">
+                        <div class="content-overlay">
+
+                            <h2 class="hero-heading">2nd Generation<br>Family Owned</h2>
+
+                            <div class="hero-text">
+                                <p>
+                                    Colorado Boat Center has been family owned and operated since 1990, and that still
+                                    means
+                                    something to us. We're not just here to sell boats, we're here to build
+                                    relationships, take
+                                    care of our customers, and be the place you come back to year after year.
+                                </p>
+                                <p>
+                                    For us, this has never been just a business. It's something we've grown up in,
+                                    something we
+                                    take pride in, and something we're committed to doing the right way, for every
+                                    person who
+                                    walks through our doors.
+                                </p>
+                                <p>
+                                    As a second-generation team, our focus is simple: honor the foundation that built
+                                    this
+                                    business while continuing to evolve it. We're not here to reinvent everything, we're
+                                    here
+                                    to carry it forward in a way that makes sense for today's boater and the next
+                                    generation
+                                    of our boating family.
+                                </p>
+                            </div>
+
+                            <a href="#" class="btn btn-outline-custom">More About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </Aboutus>
+
+    <OurBrands>
+        <!-- =========================
+     OUR BRANDS SECTION
+========================= -->
+        <section class="brands-section">
+            <div class="container-fluid px-0">
+
+                <!-- Top Content -->
+                <div class="container brands-top-content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <p class="brands-quote">
+                                “Being family-owned and operated gives us a chance to get to know people in a much
+                                different
+                                way, and that results in treating people differently. Our philosophy, ‘we treat everyone
+                                the
+                                way we would like to be treated, and around here that means…like you’re one of the
+                                family.’”
+                            </p>
+
+                            <h6 class="quote-author">— TOM AND NANCY SMITH</h6>
+
+                            <div class="brands-heading-wrapper">
+                                <h2 class="brands-heading">Our Brands</h2>
+                                <p class="brands-subtext">
+                                    We are proud to offer some of the most elite brands in the industry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brands Grid -->
+                <div class="row no-gutters">
+
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brands11.jfif" alt="Yamaha">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/yamaha-wt 1.png" class="brand-logo-img2" alt="Yamaha">
+
+                                <p>
+                                    High-energy performance meets family-friendly innovation.
+                                </p>
+
+                                <a href="#">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brand2.jfif" alt="Barletta">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/barletta-logo-white 1.png" class="brand-logo-img2"
+                                    alt="Barletta">
+
+                                <p>
+                                    Thoughtfully crafted pontoon boats that blend luxury, comfort, & smooth performance.
+                                </p>
+
+                                <a href="#">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brand3.jfif" alt="Regal">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/Regal_Logo-stacked-wt 1.png" class="brand-logo-img2" alt="Regal">
+
+                                <p>
+                                    Refined design and precision engineering come together in luxury sport boats.
+                                </p>
+
+                                <a href="#">SHOP NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brand4.jfif" alt="Mercury">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/mercury-footer-logo 1.png" class="brand-logo-img2" alt="Mercury">
+
+                                <p>
+                                    Proven marine-power delivering reliable performance and smooth operation.
+                                </p>
+
+                                <a href="#">SERVICE INQUIRY</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brand5.jfif" alt="Volvo">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/VolvoPentaLarge-wt 1.png" class="brand-logo-img2" alt="Volvo">
+
+                                <p>
+                                    Sophisticated marine propulsion systems known for quiet power and innovation.
+                                </p>
+
+                                <a href="#">SERVICE INQUIRY</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="brand-box">
+                            <img src="assets/Brand/Brand6.jfif" alt="Yamaha">
+
+                            <div class="brand-overlay-dark"></div>
+
+                            <div class="brand-content">
+                                <img src="assets/Brand/yamaha-wt 1.png" class="brand-logo-img2" alt="Yamaha">
+
+                                <p>
+                                    Legendary reliability and efficiency combined with responsive power.
+                                </p>
+
+                                <a href="#">SERVICE INQUIRY</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </OurBrands>
+    <!-- ===================================
+         LATEST ARRIVALS
+    ==================================== -->
+    <LatestArrivals>
+
+        <section class="latest-arrivals">
+            <div class="container">
+
+                <!-- Header -->
+                <div class="row align-items-start arrivals-header">
+
+                    <div class="col-lg-8">
+                        <h2 class="arrivals-title">
+                            Latest Arrivals
+                        </h2>
+
+                        <div class="arrivals-tabs">
+                            <a href="#" class="active">New</a>
+                            <a href="#">Pre-Owned</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 text-lg-right header-btn-wrapper">
+                        <a href="#" class="btn-arrivals">
+                            All Boat Listings
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Cards -->
+                <div class="row">
+
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="boat-card">
+
+                            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1200&auto=format&fit=crop"
+                                alt="" class="boat-img img-fluid">
+
+                            <div class="boat-meta">
+                                23'0" | New
+                            </div>
+
+                            <h3 class="boat-title">
+                                2026 Barletta Aria 22QC
+                            </h3>
+
+                            <div class="boat-price">
+                                $194,935
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="boat-card">
+
+                            <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop"
+                                alt="" class="boat-img img-fluid">
+
+                            <div class="boat-meta">
+                                21'4" | New
+                            </div>
+
+                            <h3 class="boat-title">
+                                2026 Regal LS4 Surf
+                            </h3>
+
+                            <div class="boat-price">
+                                $73,900
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="boat-card">
+
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+                                alt="" class="boat-img img-fluid">
+
+                            <div class="boat-meta">
+                                19'2" | New
+                            </div>
+
+                            <h3 class="boat-title">
+                                2026 Barletta Cabrio 22UC
+                            </h3>
+
+                            <div class="boat-price">
+                                $96,900
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <section class="experience-section">
+
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+
+                        <!-- Card 1 -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="experience-card">
+
+                                <img src="assets//Arrivals/couple2.png" alt="">
+
+                                <div class="experience-overlay"></div>
+
+                                <div class="experience-content">
+                                    <h2 class="experience-title">
+                                        Start Your Boating Journey
+                                    </h2>
+
+                                    <p class="experience-text">
+                                        From the first conversation to the first launch,
+                                        we make finding your perfect boat effortless every
+                                        step of the way.
+                                    </p>
+
+                                    <a href="#" class="experience-btn">
+                                        Start Your Adventure Today
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="experience-card">
+
+                                <img src="assets//Arrivals/couple1.png" alt="">
+
+                                <div class="experience-overlay"></div>
+
+                                <div class="experience-content">
+                                    <h2 class="experience-title">
+                                        The CBC Experience
+                                    </h2>
+
+                                    <p class="experience-text">
+                                        Experience the difference of a dealership that values
+                                        your time on the water as much as you do.
+                                    </p>
+
+                                    <a href="#" class="experience-btn">
+                                        Discover The CBC Difference
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="experience-card">
+
+                                <img src="assets/Arrivals/couple3.png" alt="">
+
+                                <div class="experience-overlay"></div>
+
+                                <div class="experience-content">
+                                    <h2 class="experience-title">
+                                        Service
+                                    </h2>
+
+                                    <p class="experience-text">
+                                        Full-service department with expert maintenance,
+                                        repairs and convenient programs to keep you boating.
+                                    </p>
+
+                                    <a href="#" class="experience-btn">
+                                        Service Inquiries
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="experience-card">
+
+                                <img src="assets//Arrivals/couple4.png" alt="">
+                                <div class="experience-overlay"></div>
+
+                                <div class="experience-content">
+                                    <h2 class="experience-title">
+                                        Pro Shop
+                                    </h2>
+
+                                    <p class="experience-text">
+                                        Explore boating gear, watersports equipment and
+                                        essentials to make the most of every day on the water.
+                                    </p>
+
+                                    <a href="#" class="experience-btn">
+                                        What's In Store
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </LatestArrivals>
+    <lastSection>
+        <section class="container my-5">
+            <div class="row no-gutters">
+                <div class="col-lg-6 d-flex flex-column">
+                    <div class="p-2 flex-fill">
+                        <div class="info-card">
+                            <h2 class="heading-serif">Mission</h2>
+                            <p class="mb-0">Helping you enjoy what matters most, with the people who matter
+                                most.<br><strong>Simple. Honest. Enjoyable.</strong></p>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="info-card">
+                            <h2 class="heading-serif">Vision</h2>
+                            <p class="mb-0">To be the place people trust, setting the standard for a simple, honest, and
+                                enjoyable experience, year after year and generation after generation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-flex flex-column">
+                    <div class="p-2 flex-fill">
+                        <div class="info-card">
+                            <h2 class="heading-serif mb-4">Values</h2>
+                            <p><strong>Family</strong> - We operate like a family. We support each other and treat
+                                people with respect.</p>
+                            <p><strong>Honesty</strong> - We lead with honesty. No fluff. Just clear, transparent
+                                communication.</p>
+                            <p><strong>Purpose</strong> - We show up with purpose. Everyone contributes. Everyone is
+                                engaged.</p>
+                            <p class="mb-0"><strong>Enjoyable</strong> - We bring positive energy and create an
+                                experience people enjoy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container">
+                <h2 class="heading-serif mb-5" style="font-size: 2.2rem;">What Our Customers Say</h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="media">
+                            <span class="h1 mr-3">“</span>
+                            <div class="media-body">
+                                <p class="testimonial-text">
+                                    Our only question, or worry if you will, was how Ed and all the others can wear
+                                    shorts when it is so very cold outside...BRRR!!!... and still be so very polite and
+                                    attentive. I was cold and had a coat on, still shivering, and everyone acted like it
+                                    was a warm summer day. Very impressive!
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" style="border-top: 1px solid #333;">
+
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-circle mr-3">TH</div>
+                                <span class="font-weight-bold small tracking-widest text-uppercase">Tom & Brenda
+                                    H.</span>
+                            </div>
+                            <div class="arrows">
+                                <span class="h4 mx-2" style="cursor:pointer;">&#8592;</span>
+                                <span class="h4 mx-2" style="cursor:pointer;">&#8594;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </lastSection>
+    <footer>
+        <div class="container-fluid footer-content-wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 border-right-md">
+                    <img src="assets/Header-Logo.png" alt="Logo" class="footer-logo">
+                    <p class="footer-tagline pr-lg-4">
+                        Your wife called and said it was OK to buy a boat... your kids are texting too.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                    <h6 class="footer-heading">Boats</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">New Boats For Sale</a></li>
+                        <li><a href="#">Pre-Owned Boats for Sale</a></li>
+                        <li><a href="#">Pontoon boats</a></li>
+                        <li><a href="#">Sport Fish Boats</a></li>
+                        <li><a href="#">Runabouts</a></li>
+                        <li><a href="#">Sell My Boat</a></li>
+                        <li><a href="#">Get Financing</a></li>
+                        <li><a href="#">Service Center</a></li>
+                        <li><a href="#">Storage</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6 mb-4 border-right-md pl-lg-4">
+                    <h6 class="footer-heading">Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Pro Shop</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">News & Articles</a></li>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 pl-lg-5 mt-4 mt-lg-0">
+                    <h2 class="h4 font-weight-normal mb-1">JOIN THE</h2>
+                    <h2 class="h4 font-weight-bold mb-4">CONVERSATION</h2>
+                    <div class="newsletter-group">
+                        <input type="email" class="newsletter-input" placeholder="Enter Email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <div class="container-fluid">
+                <p class="mb-0">
+                    Copyrights &copy; 2024 Colorado Boat Center. All Rights Reserved.
+                    <span class="mx-1 d-none d-md-inline">|</span>
+                    <br class="d-md-none"> <a href="#" class="text-secondary">Privacy Policy</a> |
+                    <a href="#" class="text-secondary">Accessibility</a> |
+                    <span>Powered by MDS Brand</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Home.js"></script>
+</body>
+
+</html>
